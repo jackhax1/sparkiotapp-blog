@@ -1,4 +1,3 @@
-import React from "react";
 import { Layout, Menu, Button, Typography } from "antd";
 import "./App.css"; // Optional for additional styling
 
@@ -6,7 +5,7 @@ const { Header, Content, Footer } = Layout;
 const { Title, Text } = Typography;
 
 const App = () => {
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId:any) => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
