@@ -10,13 +10,13 @@ const AboutMe = () => {
 
   return (
     <Layout>
-      <Content style={{ padding: "50px 20px", backgroundColor: "#f9f9f9",minHeight:"100vh" }} id="aboutme">
+      <Content style={{ padding: "50px 20px", backgroundColor: "#f0f2f5",minHeight:"100vh" }} id="aboutme">
         <Row gutter={[32, 32]} align="middle">
           <Col xs={24} sm={24} md={10} lg={8} style={{ textAlign: "center" }}>
             <div style={{ paddingTop: "200px" }}>
               <ParallaxContainer
                 imageUrl="https://media.licdn.com/dms/image/v2/D5603AQH0L_YkvZ3KSg/profile-displayphoto-shrink_800_800/B56ZQXpGLYG4Ac-/0/1735563437587?e=1741219200&v=beta&t=NvmB-Jecgva6JWBl23ZC2NZ0RSBXUW7zVyCmWQUMF0k"
-                height="300px"
+                height="250px"
                 overlayColor="rgba(0, 0, 0, 0.3)"
                 parallaxSpeed={0.5}
 
@@ -25,7 +25,7 @@ const AboutMe = () => {
 
 
           </Col>
-          <Col xs={24} sm={24} md={14} lg={16}>
+          <Col xs={24} sm={24} md={14} lg={16} style={{backgroundColor:"#f0f2f5"}}>
             <Title level={2} style={{ marginBottom: "20px" }}>
               About Me
             </Title>

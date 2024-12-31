@@ -45,7 +45,7 @@ const Projects = () => {
 
   return (
     <Layout>
-      <Content style={{ padding: "50px 20px", backgroundColor: "#ffffff" }} id="projects">
+      <Content style={{ padding: "50px 20px", backgroundColor: "#f9f9f9" }} id="projects">
         <Title level={2} style={{ textAlign: "center", marginBottom: "40px" }}>
           Projects
         </Title>

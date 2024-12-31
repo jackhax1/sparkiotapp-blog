@@ -1,5 +1,5 @@
 import { Layout } from "antd";
-import "./App.css"; // Optional for additional styling
+// import "./App.css"; // Optional for additional styling
 import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Contact from "./components/Contact";

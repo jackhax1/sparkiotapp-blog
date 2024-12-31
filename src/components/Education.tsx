@@ -5,7 +5,7 @@ const { Title, Text } = Typography;
 
 const Education = () => {
   return (
-      <Content style={{ padding: "50px 20px", backgroundColor: "#ffffff",minHeight:"100vh" }} id="education">
+      <Content style={{ padding: "50px 20px", backgroundColor: "#f0f2f5",minHeight:"100vh" }} id="education">
         <Title level={2} style={{ textAlign: "center", marginBottom: "40px" }}>
           Education
         </Title>

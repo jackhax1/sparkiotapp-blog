@@ -11,20 +11,24 @@ const MenuBar = () => {
         }
       };
   return (
-    <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
+    <Header style={{ position: 'sticky',
+      top: 0,
+      zIndex: 1,
+      width: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      marginTop:"-8px"}}>
     <div
       style={{
-        float: "left",
-        height: 31,
-        margin: "16px 24px 16px 0px",
         color: "white",
         fontSize: "20px",
         fontWeight: "bold",
+        marginRight:"30px"
       }}
     >
       Jamil Khan
     </div>
-    <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]}>
+    <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]} style={{ flex: 1, minWidth: 0 }}>
       <Menu.Item key="1" onClick={() => scrollToSection("aboutme")}>
         About Me
       </Menu.Item>

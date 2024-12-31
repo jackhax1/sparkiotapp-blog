@@ -62,17 +62,16 @@ const Experience = () => {
               </Text>
               <ul style={{ marginTop: "20px", paddingLeft: "20px" }}>
                 <li>
-                  Developed and delivered custom IoT solutions to clients,
-                  specializing in <strong>smart home automation</strong> and{" "}
-                  <strong>device integration</strong>.
+                  Developed free client only PDF-to-Image converter
                 </li>
                 <li>
-                  Led end-to-end project management for IoT applications,
-                  including design, development, and deployment.
+                  Developed Django based IoT platform
                 </li>
                 <li>
-                  Collaborated remotely with clients to identify requirements
-                  and deliver tailored solutions.
+                  Developed automated Linkedin-to-portfolio site generator
+                </li>
+                <li>
+                  Developed Air Quality Index (AQI) scraping API for gathering data from Ministry of Environment website
                 </li>
               </ul>
             </Card>
