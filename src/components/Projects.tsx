@@ -1,5 +1,14 @@
 import { Layout, Row, Col, Card, Typography, Tag } from "antd";
-import { CloudOutlined, FilePdfOutlined, HomeOutlined, ExperimentOutlined, AppstoreOutlined } from "@ant-design/icons";
+import {
+  CloudOutlined,
+  FilePdfOutlined,
+  HomeOutlined,
+  ExperimentOutlined,
+  AppstoreOutlined,
+  EnvironmentOutlined
+} from "@ant-design/icons";
+
+import "../App.css"
 
 const { Content } = Layout;
 const { Title, Text } = Typography;
@@ -7,10 +16,21 @@ const { Title, Text } = Typography;
 const Projects = () => {
   const projects = [
     {
+      icon: <EnvironmentOutlined style={{ fontSize: "36px", color: "#13c2c2" }} />,
+      title: "Air Pollution Index Scraper API",
+      description:
+        <>Developed a public API to scrape air pollution index data from the Malaysian
+          Ministry of Environment website. Check it out on
+          <a target="_blank" href="https://console.apify.com/actors/OcwrPfdIpEGhasbjM">{" "} Apify.</a></>,
+      tags: ["API", "Scraping", "Air Pollution", "Apify"],
+    },
+    {
       icon: <CloudOutlined style={{ fontSize: "36px", color: "#1890ff" }} />,
       title: "Django-Based IoT Platform",
       description:
-        "Developed an IoT platform integrated with EMQX, FastAPI, PostgreSQL, React, and Django on AWS.",
+        <>Developed an IoT platform integrated with EMQX, FastAPI, PostgreSQL, React, and Django on AWS.{" "}
+          Check it out on <a target="_blank" href="https://github.com/jackhax1/django_full_stack"> Github</a>
+        </>,
       tags: ["Django", "AWS", "IoT", "FastAPI", "PostgreSQL", "React"],
     },
     {
@@ -31,22 +51,27 @@ const Projects = () => {
       icon: <ExperimentOutlined style={{ fontSize: "36px", color: "#722ed1" }} />,
       title: "Traffic Sign Recognition in Rainy Conditions",
       description:
-        "Developed a computer vision system to recognize traffic signs under adverse weather conditions.",
+      <>Developed a computer vision system to recognize traffic signs under adverse weather conditions.{" "}
+          Check it out on <a target="_blank" href="https://github.com/jackhax1/Road-Sign-Recog-in-Rainy"> Github</a>
+        </>,
       tags: ["Computer Vision", "ML", "Traffic Signs"],
     },
     {
       icon: <AppstoreOutlined style={{ fontSize: "36px", color: "#eb2f96" }} />,
       title: "Diamond Digger Game Clone",
       description:
-        "Created a C++ clone of the Diamond Digger game with enhanced gameplay features.",
+      <>Created a C++ clone of the Diamond Digger game with enhanced gameplay features.{" "}
+      Check it out on <a target="_blank" href="https://github.com/jackhax1/DiamondDiggerClone"> Github</a>
+    </>,
       tags: ["C++", "Game Development"],
     },
+    
   ];
 
   return (
     <Layout>
-      <Content style={{ padding: "50px 20px", backgroundColor: "#f9f9f9" }} id="projects">
-        <Title level={2} style={{ textAlign: "center", marginBottom: "40px" }}>
+      <Content className="content-section" style={{backgroundColor: "#f9f9f9" }} id="projects">
+        <Title level={2} className="content-title">
           Projects
         </Title>
 
@@ -55,12 +80,8 @@ const Projects = () => {
             <Col xs={24} sm={12} md={8} lg={6} key={index}>
               <Card
                 hoverable
-                bordered={false}
-                style={{
-                  textAlign: "center",
-                  borderRadius: "8px",
-                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                }}
+                bordered={true}
+                className="mini-card"
               >
                 {project.icon}
                 <Title level={4} style={{ marginTop: "16px" }}>

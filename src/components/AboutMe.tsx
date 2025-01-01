@@ -1,7 +1,7 @@
 import { Layout, Row, Col, Typography } from "antd";
-import "../AboutMe.css"; // Custom CSS for parallax
 
 import ParallaxContainer from "./ParallaxComponent";
+import "../App.css"
 
 const { Content } = Layout;
 const { Title, Text } = Typography;
@@ -10,13 +10,13 @@ const AboutMe = () => {
 
   return (
     <Layout>
-      <Content style={{ padding: "50px 20px", backgroundColor: "#f0f2f5",minHeight:"100vh" }} id="aboutme">
+      <Content className="content-section" style={{ backgroundColor: "#f0f2f5", paddingTop:"64px"}} id="aboutme">
         <Row gutter={[32, 32]} align="middle">
           <Col xs={24} sm={24} md={10} lg={8} style={{ textAlign: "center" }}>
             <div style={{ paddingTop: "200px" }}>
               <ParallaxContainer
-                imageUrl="https://media.licdn.com/dms/image/v2/D5603AQH0L_YkvZ3KSg/profile-displayphoto-shrink_800_800/B56ZQXpGLYG4Ac-/0/1735563437587?e=1741219200&v=beta&t=NvmB-Jecgva6JWBl23ZC2NZ0RSBXUW7zVyCmWQUMF0k"
-                height="250px"
+                imageUrl="/1735563437587.avif"
+                height="120px"
                 overlayColor="rgba(0, 0, 0, 0.3)"
                 parallaxSpeed={0.5}
 

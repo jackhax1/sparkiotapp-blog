@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-interface MyButtonProps {
+interface ParallaxProps {
     /** The text to display inside the button */
     imageUrl: string;
     /** Whether the button can be interacted with */
@@ -10,7 +10,7 @@ interface MyButtonProps {
 
   }
 
-const ParallaxContainer = ({imageUrl,height,overlayColor,parallaxSpeed}:MyButtonProps) => {
+const ParallaxContainer = ({imageUrl,height,overlayColor,parallaxSpeed}:ParallaxProps) => {
     const containerRef = useRef<HTMLInputElement>(null);
     const imageRef = useRef(null as any);
 
@@ -55,7 +55,7 @@ const ParallaxContainer = ({imageUrl,height,overlayColor,parallaxSpeed}:MyButton
                 src={imageUrl}
                 alt="Parallax Background"
                 className="absolute top-0 left-0 w-full object-cover transition-transform duration-200 ease-out"
-                style={{ height: '120%' }}
+                style={{ height: '250px', width:"250px" }}
             />
             {overlayColor && (
                 <div

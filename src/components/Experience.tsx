@@ -1,19 +1,20 @@
 import { Layout, Card, Typography, Row, Col } from "antd";
+import "../App.css"
 
 const { Content } = Layout;
 const { Title, Text } = Typography;
 
 const Experience = () => {
   return (
-      <Content style={{ padding: "50px 20px", backgroundColor: "#f0f2f5",minHeight:"100vh" }} id="experience">
-        <Title level={2} style={{ textAlign: "center", marginBottom: "40px" }}>
+      <Content className="content-section" style={{ backgroundColor: "#f0f2f5"}} id="experience">
+        <Title level={2} className="content-title">
           Experience
         </Title>
 
         <Row gutter={[16, 16]} justify="center">
           {/* Daikin Experience */}
           <Col xs={24} md={18}>
-            <Card>
+            <Card className="large-card">
               <Title level={4}>
                 Embedded Software Engineer -{" "}
                 <Text strong>Daikin Research & Development Malaysia</Text>
@@ -51,7 +52,7 @@ const Experience = () => {
 
           {/* SparkIotApp Experience */}
           <Col xs={24} md={18}>
-            <Card>
+            <Card className="large-card">
               <Title level={4}>
                 Founder - <Text strong>SparkIotApp</Text>
               </Title>

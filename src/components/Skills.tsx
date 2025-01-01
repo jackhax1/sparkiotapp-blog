@@ -1,10 +1,13 @@
 import { Layout, Row, Col, Card, Typography } from "antd";
 import {
   WifiOutlined,
-  ApiOutlined,
   CodeOutlined,
   ToolOutlined,
+  DatabaseOutlined,
+  CloudServerOutlined,
 } from "@ant-design/icons";
+
+import "../App.css"
 
 const { Content } = Layout;
 const { Title, Text } = Typography;
@@ -13,20 +16,8 @@ const Skills = () => {
   const skills = [
     {
       icon: <WifiOutlined style={{ fontSize: "36px", color: "#1890ff" }} />,
-      title: "WiFi Protocols",
-      description: "Extensive experience in developing IoT devices using WiFi.",
-    },
-    {
-      icon: (
-        <WifiOutlined style={{ fontSize: "36px", color: "#52c41a" }} />
-      ),
-      title: "Bluetooth (BLE)",
-      description: "Proficient in creating energy-efficient BLE integrations.",
-    },
-    {
-      icon: <ApiOutlined style={{ fontSize: "36px", color: "#faad14" }} />,
-      title: "Zigbee Protocols",
-      description: "Skilled in implementing Zigbee communication in IoT systems.",
+      title: "IoT Communication Protocols",
+      description: "Extensive experience in developing IoT devices using WiFi and BLE.",
     },
     {
       icon: <CodeOutlined style={{ fontSize: "36px", color: "#722ed1" }} />,
@@ -37,14 +28,26 @@ const Skills = () => {
     {
       icon: <ToolOutlined style={{ fontSize: "36px", color: "#eb2f96" }} />,
       title: "Full Stack Development",
-      description: "Experienced with Django and React for robust web apps.",
+      description: "Experienced with Django and React for robust web applications.",
+    },
+    {
+      icon: <DatabaseOutlined style={{ fontSize: "36px", color: "#13c2c2" }} />,
+      title: "Data Science & Analytics",
+      description:
+        "Skilled in web requests, APIs, SQL/NoSQL databases, ETL processes, and data analytics.",
+    },
+    {
+      icon: <CloudServerOutlined style={{ fontSize: "36px", color: "#fa8c16" }} />,
+      title: "AWS Cloud Services",
+      description:
+        "Proficient in deploying and managing AWS services: EC2, Lambda, Route 53, CloudFront, S3, IoT Core, DynamoDB, RDS, and ECS.",
     },
   ];
 
   return (
     <Layout>
-      <Content style={{ padding: "50px 20px", backgroundColor: "#f9f9f9", minHeight:"100vh"}} id="skills">
-        <Title level={2} style={{ textAlign: "center", marginBottom: "40px" }}>
+      <Content  className="content-section" style={{ backgroundColor: "#f9f9f9"}} id="skills">
+        <Title level={2} className="content-title">
           Skills
         </Title>
 
@@ -53,12 +56,8 @@ const Skills = () => {
             <Col xs={24} sm={12} md={8} lg={6} key={index}>
               <Card
                 hoverable
-                bordered={false}
-                style={{
-                  textAlign: "center",
-                  borderRadius: "8px",
-                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                }}
+                bordered={true}
+                className="mini-card"
               >
                 {skill.icon}
                 <Title level={4} style={{ marginTop: "16px" }}>

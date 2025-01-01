@@ -1,24 +1,25 @@
 import { Layout, Card, Typography, Row, Col, Image } from "antd";
+import "../App.css"
 
 const { Content } = Layout;
 const { Title, Text } = Typography;
 
 const Education = () => {
   return (
-      <Content style={{ padding: "50px 20px", backgroundColor: "#f0f2f5",minHeight:"100vh" }} id="education">
-        <Title level={2} style={{ textAlign: "center", marginBottom: "40px" }}>
+      <Content className="content-section" style={{ backgroundColor: "#f0f2f5"}} id="education">
+        <Title level={2} className="content-title">
           Education
         </Title>
 
         <Row gutter={[16, 16]} justify="center">
           {/* University of Malaya */}
           <Col xs={24} md={18}>
-            <Card>
+            <Card className="large-card">
               <Row gutter={[16, 16]} align="middle">
                 <Col xs={6} md={4}>
                   {/* University Logo */}
                   <Image
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/University_of_Malaya_%28UM%29_coat_of_arms.png/330px-University_of_Malaya_%28UM%29_coat_of_arms.png"
+                    src="/University_of_Malaya_(UM)_coat_of_arms.webp"
                     alt="University of Malaya"
                     preview={false}
                     style={{ width: "100%" }}
@@ -40,12 +41,12 @@ const Education = () => {
 
           {/* Kolej Matrikulasi Perak */}
           <Col xs={24} md={18}>
-            <Card>
+            <Card className="large-card">
               <Row gutter={[16, 16]} align="middle">
                 <Col xs={6} md={4}>
                   {/* College Logo Placeholder */}
                   <Image
-                    src="https://upload.wikimedia.org/wikipedia/ms/thumb/7/71/Kolej_Matrikulasi_Perak.png/300px-Kolej_Matrikulasi_Perak.png"
+                    src="/Kolej_Matrikulasi_Perak.webp"
                     alt="Kolej Matrikulasi Perak"
                     preview={false}
                     style={{ width: "100%" }}

@@ -7,6 +7,8 @@ import {
   DownloadOutlined,
 } from "@ant-design/icons";
 
+import "../App.css"
+
 const { Content } = Layout;
 const { Title, Text, Link } = Typography;
 
@@ -16,8 +18,8 @@ const Contact = () => {
   };
 
   return (
-      <Content style={{ padding: "50px 20px", backgroundColor: "#f9f9f9",minHeight:"100vh" }} id="contact">
-        <Title level={2} style={{ textAlign: "center", marginBottom: "40px" }}>
+      <Content  className="content-section" id="contact" style={{backgroundColor:"#f9f9f9"}} >
+        <Title level={2} className="content-title">
           Contact Me
         </Title>
 

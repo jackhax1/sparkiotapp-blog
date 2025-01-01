@@ -14,29 +14,20 @@ const App = () => {
 
   return (
     <Layout>
-      {/* Header Section */}
       <MenuBar />
 
-
-      {/* Home Section */}
       <AboutMe />
 
-      {/* About Section */}
       <Skills />
 
-      {/* About Section */}
       <Experience />
 
-      {/* Projects Section */}
       <Projects />
 
-      {/* Contact Section */}
       <Education />
 
-      {/* Contact Section */}
       <Contact />
 
-      {/* Footer Section */}
       <Footer style={{ textAlign: "center", backgroundColor: "#001529", color: "white" }}>
         ©2024 Created by Jamil Khan
       </Footer>
