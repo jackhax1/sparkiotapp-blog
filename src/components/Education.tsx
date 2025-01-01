@@ -22,7 +22,8 @@ const Education = () => {
                     src="/University_of_Malaya_(UM)_coat_of_arms.webp"
                     alt="University of Malaya"
                     preview={false}
-                    style={{ width: "100%" }}
+                    style={{ width: "100%" , height: "100%"}}
+                    loading="lazy"
                   />
                 </Col>
                 <Col xs={18} md={20}>
@@ -31,7 +32,7 @@ const Education = () => {
                     Bachelor of Electrical Engineering, Electrical Engineering
                   </Text>
                   <br />
-                  <Text type="secondary">2018 – 2022</Text>
+                  <Text type="secondary">2018 - 2022</Text>
                   <br />
                   <Text>Grade: 3.97</Text>
                 </Col>
@@ -50,6 +51,7 @@ const Education = () => {
                     alt="Kolej Matrikulasi Perak"
                     preview={false}
                     style={{ width: "100%" }}
+                    loading="lazy"
                   />
                 </Col>
                 <Col xs={18} md={20}>
@@ -58,7 +60,7 @@ const Education = () => {
                     Physics and Computer Science Module
                   </Text>
                   <br />
-                  <Text type="secondary">Aug 2017 – Aug 2018</Text>
+                  <Text type="secondary">Aug 2017 - Aug 2018</Text>
                   <br />
                   <Text>Grade: 4.00</Text>
                   <br />

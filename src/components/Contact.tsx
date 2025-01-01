@@ -82,12 +82,7 @@ const Contact = () => {
               name="contact"
               layout="vertical"
               onFinish={handleSubmit}
-              style={{
-                backgroundColor: "#ffffff",
-                padding: "20px",
-                borderRadius: "8px",
-                boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)",
-              }}
+              className="contact-form"
             >
               <Form.Item
                 label="Your Name"
