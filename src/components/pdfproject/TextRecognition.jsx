@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Tesseract from 'tesseract.js';
-import { Button, LinearProgress, Typography } from '@mui/material';
+
+import { Progress, Typography } from "antd";
+
+const { Text } = Typography;
 
 const TextRecognition = ({ selectedImage }) => {
   const [recognizedText, setRecognizedText] = useState('');
@@ -35,14 +38,21 @@ const TextRecognition = ({ selectedImage }) => {
   }, [selectedImage]);
   return (
     <div>
-      <p>{progress==1? "Done": status}</p>
-      {progress > 0 && (
-        <div style={{ marginTop: 20 , border:"1px"}}>
-          <Typography variant="body1">Progress: {(progress*100).toFixed(0)}%</Typography>
-          <LinearProgress variant="determinate" value={progress*100} />
-        </div>
-      )}
-      <p>{recognizedText}</p>
+      <div>
+        <p>{progress === 1 ? "Done" : status}</p>
+        {progress > 0 && (
+          <div style={{ marginTop: 20, border: "1px solid #d9d9d9", padding: "10px" }}>
+            <Text>Progress: {(progress * 100).toFixed(0)}%</Text>
+            <Progress
+              percent={progress * 100}
+              status={progress < 1 ? "active" : "success"}
+              showInfo={false}
+              style={{ marginTop: 10 }}
+            />
+          </div>
+        )}
+        <p>{recognizedText}</p>
+      </div>
     </div>
   );
 };

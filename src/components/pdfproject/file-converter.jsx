@@ -1,16 +1,6 @@
-import { Download, RemoveRedEye } from "@mui/icons-material";
-import {
-  Box,
-  Button,
-  CircularProgress,
-  Grid,
-  IconButton,
-  Stack,
-} from "@mui/material";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogTitle from "@mui/material/DialogTitle";
+import { Row, Col, Card, Button, Spin,Modal } from "antd";
+import { EyeOutlined, DownloadOutlined } from "@ant-design/icons";
+
 import React, { useEffect, useMemo, useState } from "react";
 import TextRecognition from './TextRecognition';
 import { pdfjs } from 'react-pdf';
@@ -97,100 +87,100 @@ function FileConverter({ pdfUrl, fileName }) {
   };
 
   return (
-    <Box sx={{ my: 4, textAlign: "center" }} ref={myRef} id="image-container">
-      
+    <div
+  style={{ margin: "16px 0", textAlign: "center" }}
+  ref={myRef}
+  id="image-container"
+>
+
       {loading ? (
-        <CircularProgress />
+        <Spin size="large" />
       ) : (
+
+
         <>
           {imageUrls.length > 0 && (
             <>
               <h4 className="drop-file-preview__title">
                 Converted Images - {numOfPages}
               </h4>
-              <Grid container spacing={3}>
+              <Row gutter={[16, 16]}>
                 {imageUrls.map((url, index) => (
-                  <>
-                  
-                    <Grid item xs={12} sm={4} key={index}>
-                      <Box
-                        sx={{ width: "100%", height: "250px" }}
-                        className="img-card"
-                      >
-                        
+                  <Col xs={24} sm={12} md={8} key={index}>
+                    <Card
+                      hoverable
+                      style={{
+                        position: "relative",
+                        width: "100%",
+                        height: "250px",
+                        overflow: "hidden",
+                      }}
+                      cover={
+                        <>
+                        <Button
+                        type="text"
+                        icon={<EyeOutlined />}
+                        onClick={() => handleClickOpen(url, index)}
+                      />
+                      <Button
+                        type="text"
+                        icon={<DownloadOutlined />}
+                        onClick={() => downloadImage(url, index)}
+                      />
                         <img
                           src={url}
                           alt={`Page ${index + 1}`}
                           style={{
                             width: "100%",
                             height: "100%",
-                            objectFit: "cover",
                           }}
-                        />
-                        <Stack
-                          direction="row"
-                          spacing={1}
-                          sx={{ position: "absolute", top: 2, right: 2 }}
-                        >
-                          <IconButton
-                            onClick={() => handleClickOpen(url, index)}
-                            className="btn-bg"
-                          >
-                            <RemoveRedEye />
-                          </IconButton>
-                          <IconButton
-                            onClick={() => downloadImage(url, index)}
-                            className="btn-bg"
-                          >
-                            <Download />
-                          </IconButton>
-                        </Stack>
-                      </Box>
-                      <Box className="img-card">
-                    <TextRecognition selectedImage={url}/>
-                    </Box>
-                    </Grid>
-                  </>
+                        /></>
+                      }
+
+                    />
+                    <Card style={{ marginTop: "16px" }}>
+                      <TextRecognition selectedImage={url} />
+                    </Card>
+                  </Col>
                 ))}
-              </Grid>
+              </Row>
             </>
           )}
         </>
+
+
       )}
-      <Dialog
+
+      <Modal
         open={open}
-        onClose={handleClose}
-        scroll={"paper"}
-        aria-labelledby="scroll-dialog-title"
-        aria-describedby="scroll-dialog-description"
+        onCancel={handleClose}
+        title="Preview"
+        footer={[
+          <Button key="cancel" onClick={handleClose}>
+            Cancel
+          </Button>,
+          <Button
+            key="download"
+            type="primary"
+            onClick={() => downloadImage(selectedImage?.url, selectedImage?.index)}
+          >
+            Download
+          </Button>,
+        ]}
       >
-        <DialogTitle id="scroll-dialog-title">Preview</DialogTitle>
-        <DialogContent dividers={true}>
+        <div style={{ overflow: "auto", maxHeight: "400px" }}>
           <img
             src={selectedImage?.url}
             alt={selectedImage?.url}
             style={{
               width: "100%",
-              height: "100%",
+              height: "auto",
               objectFit: "cover",
             }}
           />
-        </DialogContent>
-        <DialogActions sx={{ p: 2 }}>
-          <Button variant="outlined" onClick={handleClose}>
-            Cancel
-          </Button>
-          <Button
-            variant="contained"
-            onClick={() =>
-              downloadImage(selectedImage.url, selectedImage.index)
-            }
-          >
-            Download
-          </Button>
-        </DialogActions>
-      </Dialog>
-    </Box>
+        </div>
+      </Modal>
+    </div>
   );
 }
 
