@@ -8,11 +8,27 @@ import {
 } from "@ant-design/icons";
 
 import "../App.css"
+// import data from "../data.json"
 
 const { Content } = Layout;
 const { Title, Text } = Typography;
 
 const Skills = () => {
+  // console.log(data.skills[0].icon)
+
+  // var skills = [];
+
+  // data.skills.map((item,_) =>{
+  //   console.log(item.icon)
+  //   var icon = `"<  {item.icon} +" style={{ fontSize: '36px', color:" + {item.iconColor} + "}} />"`;
+  //   var title = item.title;
+  //   var description = item.description;
+
+  //   skills.push({icon:icon,title:title,description:description})
+  // })
+
+  // console.log(skills)
+
   const skills = [
     {
       icon: <WifiOutlined style={{ fontSize: "36px", color: "#1890ff" }} />,
@@ -48,7 +64,7 @@ const Skills = () => {
     <Layout>
       <Content  className="content-section" style={{ backgroundColor: "#f9f9f9"}} id="skills">
         <Title level={2} className="content-title">
-          Skills
+          Skills 
         </Title>
 
         <Row gutter={[32, 32]} justify="center">

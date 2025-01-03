@@ -8,12 +8,21 @@ import {
   EnvironmentOutlined
 } from "@ant-design/icons";
 
+import { useNavigate } from "react-router-dom";
+
 import "../App.css"
 
 const { Content } = Layout;
 const { Title, Text } = Typography;
 
 const Projects = () => {
+
+  const navigate = useNavigate();
+
+  const handleProjectClick = () => {
+    navigate("/pdf");
+  };
+
   const projects = [
     {
       icon: <EnvironmentOutlined style={{ fontSize: "36px", color: "#13c2c2" }} />,
@@ -37,7 +46,7 @@ const Projects = () => {
       icon: <FilePdfOutlined style={{ fontSize: "36px", color: "#faad14" }} />,
       title: "Client-Side PDF to Image Converter",
       description:
-        "Built a React-based application for converting PDFs to images without server-side processing.",
+        <>Built a React-based application for converting PDFs to images without server-side processing. Check it out{" "} <a onClick={handleProjectClick}>here.</a></>,
       tags: ["React", "PDF", "Client-Side"],
     },
     {
