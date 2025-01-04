@@ -29,8 +29,10 @@ const Home = () => {
       <Contact />
 
       <Footer style={{ textAlign: "center", backgroundColor: "#001529", color: "white" }}>
-        ©2024 Created by Jamil Khan
-      </Footer>
+    ©2024 Created by Jamil Khan
+  </Footer>
+
+      
     </Layout>
   );
 };

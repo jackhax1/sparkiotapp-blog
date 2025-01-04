@@ -43,12 +43,7 @@ const TextRecognition = ({ selectedImage }) => {
         {progress > 0 && (
           <div style={{ marginTop: 20, border: "1px solid #d9d9d9", padding: "10px" }}>
             <Text>Progress: {(progress * 100).toFixed(0)}%</Text>
-            <Progress
-              percent={progress * 100}
-              status={progress < 1 ? "active" : "success"}
-              showInfo={false}
-              style={{ marginTop: 10 }}
-            />
+            <Progress percent={progress * 100} status={progress < 1 ? "active" : "success"} showInfo={false} style={{ marginTop: 10 }} />
           </div>
         )}
         <p>{recognizedText}</p>

@@ -1,4 +1,4 @@
-import { Row, Col, Card, Button, Spin,Modal } from "antd";
+import { Row, Col, Card, Button, Spin, Modal } from "antd";
 import { EyeOutlined, DownloadOutlined } from "@ant-design/icons";
 
 import React, { useEffect, useMemo, useState } from "react";
@@ -87,17 +87,9 @@ function FileConverter({ pdfUrl, fileName }) {
   };
 
   return (
-    <div
-  style={{ margin: "16px 0", textAlign: "center" }}
-  ref={myRef}
-  id="image-container"
->
+    <div style={{ margin: "16px 0", textAlign: "center" }} ref={myRef} id="image-container">
 
-      {loading ? (
-        <Spin size="large" />
-      ) : (
-
-
+      {loading ? (<Spin size="large" />) : (
         <>
           {imageUrls.length > 0 && (
             <>
@@ -107,34 +99,13 @@ function FileConverter({ pdfUrl, fileName }) {
               <Row gutter={[16, 16]}>
                 {imageUrls.map((url, index) => (
                   <Col xs={24} sm={12} md={8} key={index}>
-                    <Card
-                      hoverable
-                      style={{
-                        position: "relative",
-                        width: "100%",
-                        height: "250px",
-                        overflow: "hidden",
-                      }}
+                    <Card hoverable style={{ position: "relative", width: "100%", height: "250px", overflow: "hidden", }}
                       cover={
                         <>
-                        <Button
-                        type="text"
-                        icon={<EyeOutlined />}
-                        onClick={() => handleClickOpen(url, index)}
-                      />
-                      <Button
-                        type="text"
-                        icon={<DownloadOutlined />}
-                        onClick={() => downloadImage(url, index)}
-                      />
-                        <img
-                          src={url}
-                          alt={`Page ${index + 1}`}
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                          }}
-                        /></>
+                          <Button type="text" icon={<EyeOutlined />} onClick={() => handleClickOpen(url, index)} />
+                          <Button type="text" icon={<DownloadOutlined />} onClick={() => downloadImage(url, index)} />
+                          <img src={url} alt={`Page ${index + 1}`} style={{ width: "100%", height: "100%", }} />
+                        </>
                       }
 
                     />
@@ -151,33 +122,17 @@ function FileConverter({ pdfUrl, fileName }) {
 
       )}
 
-      <Modal
-        open={open}
-        onCancel={handleClose}
-        title="Preview"
-        footer={[
-          <Button key="cancel" onClick={handleClose}>
-            Cancel
-          </Button>,
-          <Button
-            key="download"
-            type="primary"
-            onClick={() => downloadImage(selectedImage?.url, selectedImage?.index)}
-          >
-            Download
-          </Button>,
-        ]}
+      <Modal open={open} onCancel={handleClose} title="Preview" footer={[
+        <Button key="cancel" onClick={handleClose}>
+          Cancel
+        </Button>,
+        <Button key="download" type="primary" onClick={() => downloadImage(selectedImage?.url, selectedImage?.index)}>
+          Download
+        </Button>,
+      ]}
       >
         <div style={{ overflow: "auto", maxHeight: "400px" }}>
-          <img
-            src={selectedImage?.url}
-            alt={selectedImage?.url}
-            style={{
-              width: "100%",
-              height: "auto",
-              objectFit: "cover",
-            }}
-          />
+          <img src={selectedImage?.url} alt={selectedImage?.url} style={{ width: "100%", height: "auto", objectFit: "cover", }} />
         </div>
       </Modal>
     </div>
