@@ -10,8 +10,6 @@ import {
 
 import { useNavigate } from "react-router-dom";
 
-import "../App.css"
-
 const { Content } = Layout;
 const { Title, Text } = Typography;
 

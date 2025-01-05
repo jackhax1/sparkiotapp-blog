@@ -49,6 +49,9 @@ const FileInput = (props) => {
         <Typography.Title level={1} style={{ fontSize: "20px", fontWeight: "", letterSpacing: 1, margin:"0px"}} >
           powered by Tesseract.js
         </Typography.Title>
+        <Typography.Title level={1} style={{ fontSize: "12px", fontWeight: "", letterSpacing: 1, margin:"5px"}} >
+          Mobile users (beware!): WebWorker crashes sometimes
+        </Typography.Title>
       </div>
 
       {!file ? (

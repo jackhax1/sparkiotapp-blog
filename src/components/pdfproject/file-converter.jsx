@@ -102,8 +102,11 @@ function FileConverter({ pdfUrl, fileName }) {
                     <Card hoverable style={{ position: "relative", width: "100%", height: "250px", overflow: "hidden", }}
                       cover={
                         <>
+                        <Row>
                           <Button type="text" icon={<EyeOutlined />} onClick={() => handleClickOpen(url, index)} />
                           <Button type="text" icon={<DownloadOutlined />} onClick={() => downloadImage(url, index)} />
+                        </Row>
+                          
                           <img src={url} alt={`Page ${index + 1}`} style={{ width: "100%", height: "100%", }} />
                         </>
                       }

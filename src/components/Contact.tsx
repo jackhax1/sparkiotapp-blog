@@ -5,9 +5,8 @@ import {
   EnvironmentOutlined,
   LinkedinOutlined,
   DownloadOutlined,
+  GithubOutlined
 } from "@ant-design/icons";
-
-import "../App.css"
 
 const { Content } = Layout;
 const { Title, Text, Link } = Typography;
@@ -57,6 +56,18 @@ const Contact = () => {
                   style={{ marginLeft: "10px" }}
                 >
                   LinkedIn Profile
+                </Link>
+              </div>
+              <div>
+                <GithubOutlined
+                  style={{ fontSize: "24px", color: "#00000" }}
+                />
+                <Link
+                  href="https://github.com/jackhax1"
+                  target="_blank"
+                  style={{ marginLeft: "10px" }}
+                >
+                  GitHub Profile
                 </Link>
               </div>
               {/* Resume */}

@@ -7,7 +7,6 @@ import {
   CloudServerOutlined,
 } from "@ant-design/icons";
 
-import "../App.css"
 // import data from "../data.json"
 
 const { Content } = Layout;
