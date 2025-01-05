@@ -1,13 +1,16 @@
 import { useNavigate } from "react-router-dom";
-import { useState, lazy, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import { Row, Col, Button, Layout, Card } from "antd";
 const { Content, Footer, Header } = Layout;
 
 import { RcFile } from "antd/es/upload/interface.js";
 
-const FileInput = lazy(() => import("../components/pdfproject/file-input"));
-const FileConverter = lazy(() => import("../components/pdfproject/file-converter"));
+import FileInput from "../components/pdfproject/file-input";
+import FileConverter from "../components/pdfproject/file-converter";
+
+// const FileInput = lazy(() => import("../components/pdfproject/file-input"));
+// const FileConverter = lazy(() => import("../components/pdfproject/file-converter"));
 
 
 
