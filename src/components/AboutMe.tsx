@@ -34,19 +34,18 @@ const AboutMe = () => {
               <strong>IoT Developer</strong> passionate about leveraging
               technology to create innovative solutions. I specialize in
               developing firmware for IoT devices, focusing on communication
-              protocols such as <strong>WiFi</strong>, <strong>BLE</strong>, and{" "}
-              <strong>Zigbee</strong>.
+              protocols such as <strong>WiFi</strong>, and{" "}<strong>BLE</strong>.
               <br />
               <br />
               With a strong foundation in full-stack development using{" "}
-              <strong>Django</strong> and <strong>React</strong>, I’ve also
+              <strong>Django</strong> and <strong>React</strong>, I've also
               worked on various projects, including IoT platforms, home
-              automation systems, and computer vision applications. I’m always
+              automation systems, and computer vision applications. I'm always
               looking for new challenges and opportunities to grow in this
               dynamic field.
               <br />
               <br />
-              When I’m not coding, I enjoy exploring new technologies, improving my
+              When I'm not coding, I enjoy exploring new technologies, improving my
               knowledge of wireless communication protocols, and staying updated with
               the latest trends in IoT and embedded systems.
             </Text>
