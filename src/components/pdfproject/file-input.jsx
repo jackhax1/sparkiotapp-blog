@@ -42,12 +42,12 @@ const FileInput = (props) => {
 
   return (
     <div>
-      <div style={{ textAlign: "center", marginBottom: "24px" }}>
-        <Typography.Title level={1} style={{ fontSize: "40px", textTransform: "uppercase", fontWeight: "bold", letterSpacing: 1, color: "#1890ff", }} >
-          PDF
+      <div style={{ textAlign: "center", margin:"24px"}}>
+        <Typography.Title level={1} style={{ fontSize: "40px", textTransform: "uppercase", fontWeight: "bold", letterSpacing: 1, color: "#1890ff", margin:"0px"}} >
+          PDF OCR
         </Typography.Title>
-        <Typography.Title level={1} style={{ fontSize: "40px", textTransform: "uppercase", fontWeight: "bold", letterSpacing: 1, }} >
-          to Text by Jamil
+        <Typography.Title level={1} style={{ fontSize: "20px", fontWeight: "", letterSpacing: 1, margin:"0px"}} >
+          powered by Tesseract.js
         </Typography.Title>
       </div>
 

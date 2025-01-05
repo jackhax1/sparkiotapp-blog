@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import { Spin } from "antd";
+import { Analytics } from "@vercel/analytics/react"
 const Home = lazy(() => import("./pages/Home"));
 const PDFProject = lazy(() => import("./pages/PDFProject"));
 
@@ -9,6 +10,7 @@ import "./App.css"
 function App() {
   return (
     <Router>
+      <Analytics/>
       {/* Suspense provides a fallback UI while the lazy-loaded component is being fetched */}
       <Suspense fallback={<div style={{
         display: "flex",

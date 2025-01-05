@@ -34,6 +34,13 @@ const Projects = () => {
       tags: ["API", "Scraping", "Air Pollution", "Apify"],
     },
     {
+      icon: <FilePdfOutlined style={{ fontSize: "36px", color: "#faad14" }} />,
+      title: "Client-Side PDF Optical Character Recognition",
+      description:
+        <>Built a React-based application for converting PDFs to images and perform OCR without server-side processing. Check it out{" "} <a href="#pdf" onClick={handleProjectClick}>here.</a></>,
+      tags: ["React", "PDF","OCR" ,"Client-Side"],
+    },
+    {
       icon: <CloudOutlined style={{ fontSize: "36px", color: "#1890ff" }} />,
       title: "Django-Based IoT Platform",
       description:
@@ -42,13 +49,7 @@ const Projects = () => {
         </>,
       tags: ["Django", "AWS", "IoT", "FastAPI", "PostgreSQL", "React"],
     },
-    {
-      icon: <FilePdfOutlined style={{ fontSize: "36px", color: "#faad14" }} />,
-      title: "Client-Side PDF to Image Converter",
-      description:
-        <>Built a React-based application for converting PDFs to images without server-side processing. Check it out{" "} <a onClick={handleProjectClick}>here.</a></>,
-      tags: ["React", "PDF", "Client-Side"],
-    },
+    
     {
       icon: <HomeOutlined style={{ fontSize: "36px", color: "#52c41a" }} />,
       title: "Home Automation System",
