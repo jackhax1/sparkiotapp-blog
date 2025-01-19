@@ -21,6 +21,10 @@ const Projects = () => {
     navigate("/pdf");
   };
 
+  const handleDashboardClick = () => {
+    navigate("/dashboard");
+  };
+
   const projects = [
     {
       icon: <EnvironmentOutlined style={{ fontSize: "36px", color: "#13c2c2" }} />,
@@ -28,7 +32,9 @@ const Projects = () => {
       description:
         <>Developed a public API to scrape air pollution index data from the Malaysian
           Ministry of Environment website. Check it out on
-          <a target="_blank" href="https://console.apify.com/actors/OcwrPfdIpEGhasbjM">{" "} Apify.</a></>,
+          <a target="_blank" href="https://console.apify.com/actors/OcwrPfdIpEGhasbjM">{" "} Apify.</a>
+          {" "}Also check it out here{" "} <a href="#dashboard" onClick={handleDashboardClick}>here.</a>
+        </>,
       tags: ["API", "Scraping", "Air Pollution", "Apify"],
     },
     {
@@ -36,7 +42,7 @@ const Projects = () => {
       title: "Client-Side PDF Optical Character Recognition",
       description:
         <>Built a React-based application for converting PDFs to images and perform OCR without server-side processing. Check it out{" "} <a href="#pdf" onClick={handleProjectClick}>here.</a></>,
-      tags: ["React", "PDF","OCR" ,"Client-Side"],
+      tags: ["React", "PDF", "OCR", "Client-Side"],
     },
     {
       icon: <CloudOutlined style={{ fontSize: "36px", color: "#1890ff" }} />,
@@ -47,7 +53,7 @@ const Projects = () => {
         </>,
       tags: ["Django", "AWS", "IoT", "FastAPI", "PostgreSQL", "React"],
     },
-    
+
     {
       icon: <HomeOutlined style={{ fontSize: "36px", color: "#52c41a" }} />,
       title: "Home Automation System",
@@ -59,7 +65,7 @@ const Projects = () => {
       icon: <ExperimentOutlined style={{ fontSize: "36px", color: "#722ed1" }} />,
       title: "Traffic Sign Recognition in Rainy Conditions",
       description:
-      <>Developed a computer vision system to recognize traffic signs under adverse weather conditions.{" "}
+        <>Developed a computer vision system to recognize traffic signs under adverse weather conditions.{" "}
           Check it out on <a target="_blank" href="https://github.com/jackhax1/Road-Sign-Recog-in-Rainy"> Github</a>
         </>,
       tags: ["Computer Vision", "ML", "Traffic Signs"],
@@ -68,17 +74,17 @@ const Projects = () => {
       icon: <AppstoreOutlined style={{ fontSize: "36px", color: "#eb2f96" }} />,
       title: "Diamond Digger Game Clone",
       description:
-      <>Created a C++ clone of the Diamond Digger game with enhanced gameplay features.{" "}
-      Check it out on <a target="_blank" href="https://github.com/jackhax1/DiamondDiggerClone"> Github</a>
-    </>,
+        <>Created a C++ clone of the Diamond Digger game with enhanced gameplay features.{" "}
+          Check it out on <a target="_blank" href="https://github.com/jackhax1/DiamondDiggerClone"> Github</a>
+        </>,
       tags: ["C++", "Game Development"],
     },
-    
+
   ];
 
   return (
     <Layout>
-      <Content className="content-section" style={{backgroundColor: "#f9f9f9" }} id="projects">
+      <Content className="content-section" style={{ backgroundColor: "#f9f9f9" }} id="projects">
         <Title level={2} className="content-title">
           Projects
         </Title>
