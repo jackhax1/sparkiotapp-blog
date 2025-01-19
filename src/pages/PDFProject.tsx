@@ -1,27 +1,20 @@
-import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy } from "react";
 
-import { Row, Col, Button, Layout, Card } from "antd";
-const { Content, Footer, Header } = Layout;
+import { Row, Col,Layout, Card } from "antd";
+const { Content} = Layout;
 
 import { RcFile } from "antd/es/upload/interface.js";
 
 import FileInput from "../components/pdfproject/file-input";
 import FileConverter from "../components/pdfproject/file-converter";
+import MenuBarBack from "../components/MenuBarBack";
 
-// const FileInput = lazy(() => import("../components/pdfproject/file-input"));
-// const FileConverter = lazy(() => import("../components/pdfproject/file-converter"));
-
-
+import { scrollToTop } from "../utils";
+const PageFooter = lazy(()=> import("../components/PageFooter"))
 
 
 const PDFProject = () => {
-    const navigate = useNavigate();
     const [pdfFile, setPdfFile] = useState<RcFile>();
-
-    const scrollToTop = () => {
-        window.scrollTo(0, 0)
-    }
 
     useEffect(() => {
         scrollToTop();
@@ -29,35 +22,7 @@ const PDFProject = () => {
 
     return (
         <Layout>
-            <Header style={{
-                position: 'sticky',
-                top: 0,
-                zIndex: 1,
-                width: '100%',
-                display: 'flex',
-                alignItems: 'center',
-                marginTop: "-8px"
-            }}>
-                <div
-                    style={{
-                        color: "white",
-                        fontSize: "20px",
-                        fontWeight: "bold",
-                        marginRight: "30px"
-                    }}
-                >
-                    Jamil Khan
-                </div>
-                <Row gutter={[32, 32]} justify="center">
-                    <Col span={6}>
-                    <Button onClick={() => navigate("/")} type="primary">
-                        Back to Home
-                    </Button>
-                    </Col>
-                    
-                </Row>
-
-            </Header>
+            <MenuBarBack/>
 
 
             <Content className="content-section" style={{ backgroundColor: "#f0f2f5" }}>
@@ -78,9 +43,7 @@ const PDFProject = () => {
                 </Row>
             </Content>
 
-            <Footer style={{ textAlign: "center", backgroundColor: "#001529", color: "white" }}>
-                ©2024 Created by Jamil Khan
-            </Footer>
+            <PageFooter/>
         </Layout>
     );
 };
