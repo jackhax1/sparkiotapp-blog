@@ -34,9 +34,9 @@
 
 .back-button{
   background-color: "#1890ff" !important;
-                        color: "white" !important;
-                        border: "none" !important;
-                        border-radius: "4px" !important;
-                        padding: "10px 15px" !important;
-                        cursor: "pointer" !important;
+  color: "white" !important;
+  border: "none" !important;
+  border-radius: "4px" !important;
+  padding: "10px 15px" !important;
+  cursor: "pointer" !important;
 }
