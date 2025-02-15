@@ -125,7 +125,7 @@ const APIDashboard = () => {
                         <MapCard title={"River Water Level (Sabah & Sarawak)"} data={dataRiver}  peninsular={false}/>
                     </Col>
                     <Col xs={24} lg={12}>
-                        <Card>
+                        <Card title={"Air Quality"}>
                             <div style={{ marginBottom: 20 }}>
                                 <Select
                                     placeholder="Select Station ID"
@@ -150,7 +150,7 @@ const APIDashboard = () => {
                         </Card>
                     </Col>
                     <Col xs={24} lg={12}>
-                        <Card title={"Chart for " + selectedStation}>
+                        <Card title={selectedStation?"Air Quality Chart for " + selectedStation:"Air Quality Chart for -" }>
                             <ResponsiveContainer width="100%" height={400}>
                                 <LineChart width={500}
                                     height={300}

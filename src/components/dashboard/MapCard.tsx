@@ -106,18 +106,18 @@ const MapCard = ({ data, peninsular ,title}: MapComponentProps) => {
             title={title}
             style={{
                 width: "100%",
-                height: window.innerWidth * 0.35
+                height: window.innerHeight * 0.75
             }}
         >
             <MapContainer
                 center={peninsular ? [3.697998, 102.1169] : [3.56134, 114.56491]}
                 zoom={6}
                 scrollWheelZoom={false}
-                style={{ width: "100%", height: window.innerWidth * 0.28 }} // Ensuring it gets height
+                style={{ width: "100%", height: window.innerHeight * 0.6 }} // Ensuring it gets height
             >
                 <TileLayer
-                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    attribution='&copy; OpenStreetMap contributors'
+  url="https://a.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
                 />
                 {filteredData.map((station, index) => (
                     <Marker key={index} position={[station[1], station[2]]} icon={getMarkerIcon(station[4])}>
