@@ -8,9 +8,9 @@ interface ParallaxProps {
     overlayColor: string;
     parallaxSpeed: number;
 
-  }
+}
 
-const ParallaxContainer = ({imageUrl,height,overlayColor,parallaxSpeed}:ParallaxProps) => {
+const ParallaxContainer = ({ imageUrl, height, overlayColor, parallaxSpeed }: ParallaxProps) => {
     const containerRef = useRef<HTMLInputElement>(null);
     const imageRef = useRef(null as any);
 
@@ -55,7 +55,7 @@ const ParallaxContainer = ({imageUrl,height,overlayColor,parallaxSpeed}:Parallax
                 src={imageUrl}
                 alt="Parallax Background"
                 className="absolute top-0 left-0 w-full object-cover transition-transform duration-200 ease-out"
-                style={{ height: '250px', width:"250px" }}
+                style={{ height: '250px', width: "250px" }}
             />
             {overlayColor && (
                 <div
