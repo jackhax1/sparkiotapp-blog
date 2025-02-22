@@ -40,3 +40,17 @@
   padding: "10px 15px" !important;
   cursor: "pointer" !important;
 }
+
+
+.card3d {
+  transform-style: preserve-3d;
+  transition: transform 0.2s ease-out;
+}
+
+.card3d:hover {
+  transform: scale(1.05);
+}
+
+.card3d-content {
+  transform: translateZ(10px);
+}

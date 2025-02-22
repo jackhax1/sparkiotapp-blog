@@ -1,4 +1,4 @@
-import { Layout, Row, Col, Card, Typography, Tag } from "antd";
+import { Layout, Row, Col,Typography, Tag } from "antd";
 import {
   CloudOutlined,
   FilePdfOutlined,
@@ -9,6 +9,7 @@ import {
 } from "@ant-design/icons";
 
 import { useNavigate } from "react-router-dom";
+import Card3D from "./Card3D";
 
 const { Content } = Layout;
 const { Title, Text } = Typography;
@@ -92,10 +93,7 @@ const Projects = () => {
         <Row gutter={[32, 32]} justify="center">
           {projects.map((project, index) => (
             <Col xs={24} sm={12} md={8} lg={6} key={index}>
-              <Card
-                hoverable
-                bordered={true}
-                className="mini-card"
+              <Card3D
               >
                 {project.icon}
                 <Title level={4} style={{ marginTop: "16px" }}>
@@ -111,7 +109,7 @@ const Projects = () => {
                     </Tag>
                   ))}
                 </div>
-              </Card>
+              </Card3D>
             </Col>
           ))}
         </Row>

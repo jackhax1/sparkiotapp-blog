@@ -1,4 +1,4 @@
-import { Layout, Row, Col, Card, Typography } from "antd";
+import { Layout, Row, Col,Typography } from "antd";
 import {
   WifiOutlined,
   CodeOutlined,
@@ -7,26 +7,12 @@ import {
   CloudServerOutlined,
 } from "@ant-design/icons";
 
-// import data from "../data.json"
+import Card3D from "./Card3D";
 
 const { Content } = Layout;
-const { Title, Text } = Typography;
+const { Title ,Text} = Typography;
 
 const Skills = () => {
-  // console.log(data.skills[0].icon)
-
-  // var skills = [];
-
-  // data.skills.map((item,_) =>{
-  //   console.log(item.icon)
-  //   var icon = `"<  {item.icon} +" style={{ fontSize: '36px', color:" + {item.iconColor} + "}} />"`;
-  //   var title = item.title;
-  //   var description = item.description;
-
-  //   skills.push({icon:icon,title:title,description:description})
-  // })
-
-  // console.log(skills)
 
   const skills = [
     {
@@ -69,17 +55,13 @@ const Skills = () => {
         <Row gutter={[32, 32]} justify="center">
           {skills.map((skill, index) => (
             <Col xs={24} sm={12} md={8} lg={6} key={index}>
-              <Card
-                hoverable
-                bordered={true}
-                className="mini-card"
-              >
+                <Card3D>
                 {skill.icon}
-                <Title level={4} style={{ marginTop: "16px" }}>
-                  {skill.title}
-                </Title>
-                <Text>{skill.description}</Text>
-              </Card>
+                  <Title level={4} style={{ marginTop: "16px" }}>
+                    {skill.title}
+                  </Title>
+                  <Text>{skill.description}</Text>
+                </Card3D>
             </Col>
           ))}
         </Row>
