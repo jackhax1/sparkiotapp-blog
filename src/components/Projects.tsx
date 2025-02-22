@@ -5,7 +5,8 @@ import {
   HomeOutlined,
   ExperimentOutlined,
   AppstoreOutlined,
-  EnvironmentOutlined
+  EnvironmentOutlined,
+  RobotOutlined
 } from "@ant-design/icons";
 
 import { useNavigate } from "react-router-dom";
@@ -29,14 +30,12 @@ const Projects = () => {
   const projects = [
     {
       icon: <EnvironmentOutlined style={{ fontSize: "36px", color: "#13c2c2" }} />,
-      title: "Air Pollution Index Scraper API",
+      title: "Air Pollution/ Flood Alert System",
       description:
-        <>Developed a public API to scrape air pollution index data from the Malaysian
-          Ministry of Environment website. Check it out on
-          <a target="_blank" href="https://console.apify.com/actors/OcwrPfdIpEGhasbjM">{" "} Apify.</a>
-          {" "}Also check it out here{" "} <a href="#dashboard" onClick={handleDashboardClick}>here.</a>
+        <>Developed an API to scrape air pollution and river level data from the Malaysian
+          Ministry of Environment website. Check it out{" "} <a href="#dashboard" onClick={handleDashboardClick}>here.</a>
         </>,
-      tags: ["API", "Scraping", "Air Pollution", "Apify"],
+      tags: ["API", "Scraping", "Air Pollution", "Apify", "Flood"],
     },
     {
       icon: <FilePdfOutlined style={{ fontSize: "36px", color: "#faad14" }} />,
@@ -53,6 +52,21 @@ const Projects = () => {
           Check it out on <a target="_blank" href="https://github.com/jackhax1/django_full_stack"> Github</a>
         </>,
       tags: ["Django", "AWS", "IoT", "FastAPI", "PostgreSQL", "React"],
+    },
+
+    {
+      icon: <RobotOutlined style={{ fontSize: "36px", color: "#1890ff" }} />,
+      title: "AI-Driven Crypto Meta-Strategy Bot",
+      description: (
+        <>
+          Built an <b>AI-powered meta-strategy</b> for crypto trading
+          to adapt across{" "} <b>40+ trading pairs</b>. Runs <b>24/7</b> with 
+          dynamic risk management on <b>Binance</b>.
+        </>
+      ),
+      tags: [
+        "Meta-Strategy", "Machine Learning", "Python", "Binance API"
+      ],
     },
 
     {
