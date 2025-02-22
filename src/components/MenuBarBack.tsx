@@ -9,7 +9,7 @@ const MenuBarBack = () => {
         <Header style={{
             position: 'sticky',
             top: 0,
-            zIndex: 10000,
+            zIndex: 2000,
             width: '100%',
             display: 'flex',
             alignItems: 'center',
