@@ -15,7 +15,7 @@ const AboutMe = () => {
           <Col xs={24} sm={24} md={10} lg={8} style={{ textAlign: "center" }}>
             <div style={{ paddingTop: "200px" }}>
               <ParallaxContainer
-                imageUrl="/1735563437587.avif"
+                imageUrl="/1735563437587_1.avif"
                 height="120px"
                 overlayColor="rgba(0, 0, 0, 0.3)"
                 parallaxSpeed={0.5}
