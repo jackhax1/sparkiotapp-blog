@@ -16,7 +16,7 @@ const Experience = () => {
         <Col xs={24} md={18}>
           <Card className="large-card">
             <Title level={4}>
-              Embedded Software Engineer -{" "}
+              Senior Software Engineer -{" "}
               <Text strong>Daikin Research & Development Malaysia</Text>
             </Title>
             <Text type="secondary">Aug 2022 – Present · 3 yrs 4 mos</Text>
@@ -26,26 +26,23 @@ const Experience = () => {
               On-site
             </Text>
             <ul style={{ marginTop: "20px", paddingLeft: "20px" }}>
+              <li><strong>Lead software development</strong> team designing new WiFi-based IoT product</li>
+
+              <li>Redesigned software architecture of WiFi-based product with projected <strong>annual cost saving of RM900,000</strong></li>
               <li>
-                Co-developed a custom bootloader to enable firmware upgrades
+                Co-developed a custom <strong>bootloader</strong> to enable firmware upgrades
                 via UART.
               </li>
-              <li>
-                Developed firmware for embedded systems involving{" "}
-                <strong>BLE</strong>, <strong>Wi-Fi</strong>, and{" "}
-                <strong>Zigbee</strong>.
-              </li>
-              <li>
-                Designed and implemented an automated unit testing platform
-                for IoT devices, testing both software and hardware.
-              </li>
+              <li>Developed MQTT-based device checker to <strong>streamline product development process</strong></li>
               <li>
                 Created an <strong>Automated Test Execution and Monitoring
                   Dashboard</strong>, a developer login system, and a
                 report/log file retrieval UI—all hosted on a local Linux
                 machine.
               </li>
-              <li>Worked on <strong>Matter-based IoT devices</strong>.</li>
+              <li>Developed <strong>Matter-based IoT devices</strong>.</li>
+
+
             </ul>
           </Card>
         </Col>

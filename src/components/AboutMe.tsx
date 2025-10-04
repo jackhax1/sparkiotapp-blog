@@ -13,11 +13,11 @@ const AboutMe = () => {
       <Content className="content-section" style={{ backgroundColor: "#f0f2f5", paddingTop:"64px"}} id="aboutme">
         <Row gutter={[32, 32]} align="middle">
           <Col xs={24} sm={24} md={10} lg={8} style={{ textAlign: "center" }}>
-            <div style={{ paddingTop: "200px" }}>
+            <div style={{ paddingTop: "200px"}}>
               <ParallaxContainer
                 imageUrl="/1735563437587_1.avif"
                 height="120px"
-                overlayColor="rgba(0, 0, 0, 0.3)"
+                overlayColor="rgba(0, 0, 0, 0)"
                 parallaxSpeed={0.5}
 
               />
@@ -45,9 +45,7 @@ const AboutMe = () => {
               dynamic field.
               <br />
               <br />
-              When I'm not coding, I enjoy exploring new technologies, improving my
-              knowledge of wireless communication protocols, and staying updated with
-              the latest trends in IoT and embedded systems.
+              When I'm not coding, I enjoy exploring new technologies, gardening and kickboxing.
             </Text>
           </Col>
         </Row>

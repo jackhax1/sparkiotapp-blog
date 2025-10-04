@@ -55,7 +55,7 @@ const ParallaxContainer = ({ imageUrl, height, overlayColor, parallaxSpeed }: Pa
                 src={imageUrl}
                 alt="Parallax Background"
                 className="absolute top-0 left-0 w-full object-cover transition-transform duration-200 ease-out"
-                style={{ height: '250px', width: "250px" }}
+                style={{ height: '300px', width: "411px" }}
             />
             {overlayColor && (
                 <div

@@ -17,8 +17,8 @@ const Skills = () => {
   const skills = [
     {
       icon: <WifiOutlined style={{ fontSize: "36px", color: "#1890ff" }} />,
-      title: "IoT Communication Protocols",
-      description: "Extensive experience in developing IoT devices using WiFi and BLE.",
+      title: "IoT Device Development",
+      description: "RTOS, WiFi, BLE, HTTPS, MQTT, TCP, UDP",
     },
     {
       icon: <CodeOutlined style={{ fontSize: "36px", color: "#722ed1" }} />,
