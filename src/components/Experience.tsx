@@ -51,14 +51,16 @@ const Experience = () => {
         <Col xs={24} md={18}>
           <Card className="large-card">
             <Title level={4}>
-              Founder - <Text strong>SparkIotApp</Text>
+              For Fun - <Text strong>Personal Projects</Text>
             </Title>
-            <Text type="secondary">Mar 2024 – Present · 10 mos</Text>
             <br />
             <Text type="secondary">
               Petaling Jaya, Selangor, Malaysia · Remote
             </Text>
             <ul style={{ marginTop: "20px", paddingLeft: "20px" }}>
+              <li>
+                Developed <strong>automated crypto trading bot</strong>. Hosted on Vultr, running 24/7 
+              </li>
               <li>
                 Developed free client-side <strong>PDF-to-Image converter</strong> with <strong>Optical Character Recognition</strong>.
               </li>
