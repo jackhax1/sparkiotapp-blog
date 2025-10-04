@@ -19,7 +19,7 @@ const Experience = () => {
               Embedded Software Engineer -{" "}
               <Text strong>Daikin Research & Development Malaysia</Text>
             </Title>
-            <Text type="secondary">Aug 2022 – Present · 2 yrs 5 mos</Text>
+            <Text type="secondary">Aug 2022 – Present · 3 yrs 4 mos</Text>
             <br />
             <Text type="secondary">
               Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia ·
